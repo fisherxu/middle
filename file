@@ -3,3 +3,5 @@ https://hub.docker.com/r/mirrorgooglecontainers/kube-apiserver-amd64/tags/
 docker pull mirrorgooglecontainers/k8s-dns-dnsmasq-nanny-amd64:1.14.4
 gen-swagger-docs:v8
 docker pull googlecontainer/gen-swagger-docs
+Source Synchronizer
+Remote Hosts Access
