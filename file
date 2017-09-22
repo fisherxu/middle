@@ -5,3 +5,4 @@ gen-swagger-docs:v8
 docker pull googlecontainer/gen-swagger-docs
 Source Synchronizer
 Remote Hosts Access
+http://licyhust.com/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/2016/10/06/k8s-api/
