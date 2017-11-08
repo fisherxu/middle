@@ -13,6 +13,26 @@ https://jicki.me/2017/07/04/kubernetes-1.7.0/
 http://ma0921.manlf.cn/app/index.php?jump=1&c=entry&do=show&m=xiaof_toupiao&i=5&sid=14&id=266&wxref=mp.weixin.qq.com&from=timeline&isappinstalled=0
 
 
+package main
+
+import (
+	"fmt"
+
+	"net"
+	"net/http"
+	_ "os"
+	_ "reflect"
+)
+
+type Foo struct {
+	X string `json:"x,omitempty"`
+	Y *int
+}
+
+func (f Foo) Do() *int {
+	return f.Y
+}
+
 func main() {
 	//var i []int = []int{1, 2}
 	//i = append(i, 6)
@@ -45,10 +65,6 @@ func main() {
 	if err != nil {
 		fmt.Println("err", err)
 	}
-
-	ts := Ts{
-		URL: "asdsa",
-	}
 }
 
 type Ts struct {
@@ -73,3 +89,4 @@ func getLocalIp() string {
 	}
 	return ""
 }
+
