@@ -11,3 +11,65 @@ http://www.10tiao.com/html/557/201509/214548448/2.html
 chakri-nelluri
 https://jicki.me/2017/07/04/kubernetes-1.7.0/
 http://ma0921.manlf.cn/app/index.php?jump=1&c=entry&do=show&m=xiaof_toupiao&i=5&sid=14&id=266&wxref=mp.weixin.qq.com&from=timeline&isappinstalled=0
+
+
+func main() {
+	//var i []int = []int{1, 2}
+	//i = append(i, 6)
+	////var foo Foo
+	//var f = &Foo{"", nil}
+	//typ := reflect.TypeOf(f)
+	////fmt.Println(typ.MethodByName().)
+	////fmt.Println(reflect.TypeOf(foo)) //main.Foo
+	//
+	//fmt.Println(typ)
+	//
+	//var s = "abc"
+	//fmt.Println(reflect.ValueOf(i)) //<int Value>
+	//fmt.Println(reflect.ValueOf(f)) //<main.Foo Value>
+	//fmt.Println(reflect.ValueOf(s))
+	//
+	//fmt.Println(os.Hostname())
+	//
+	//var a interface{} = 1.1
+	//v, ok := a.(float64)
+	//if !ok {
+	//	fmt.Println("failure")
+	//	return
+	//}
+	//fmt.Println("Where are you,Jonny?", v)
+	h := http.FileServer(http.Dir("/tmp"))
+	l, _ := net.Listen("tcp", getLocalIp()+":0")
+	fmt.Println(l.Addr().String())
+	err := http.Serve(l, h)
+	if err != nil {
+		fmt.Println("err", err)
+	}
+
+	ts := Ts{
+		URL: "asdsa",
+	}
+}
+
+type Ts struct {
+	URL string
+}
+
+func getLocalIp() string {
+	var IpAddr string
+	ifaces, _ := net.Interfaces()
+	for _, iface := range ifaces {
+		if iface.Name == "eth0" {
+			addrs, _ := iface.Addrs()
+			for _, addr := range addrs {
+				if ipnet, ok := addr.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+					if nil != ipnet.IP.To4() {
+						IpAddr = ipnet.IP.String()
+						return IpAddr
+					}
+				}
+			}
+		}
+	}
+	return ""
+}
