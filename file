@@ -132,3 +132,25 @@ func StartSimpleHttp() Ts {
         }
         return ts
 }
+
+Nov 13 18:56:47.652: INFO: Failed to get response from guestbook. err: <nil>, response: <br />
+<b>Fatal error</b>:  Uncaught exception 'Predis\Connection\ConnectionException' with message 'php_network_getaddresses: getaddrinfo failed: Name or service not known [tcp://:6379]' in /usr/local/lib/php/Predis/Connection/AbstractConnection.php:168
+Stack trace:
+#0 /usr/local/lib/php/Predis/Connection/StreamConnection.php(97): Predis\Connection\AbstractConnection-&gt;onConnectionError('php_network_get...', 0)
+#1 /usr/local/lib/php/Predis/Connection/StreamConnection.php(58): Predis\Connection\StreamConnection-&gt;tcpStreamInitializer(Object(Predis\Connection\Parameters))
+#2 /usr/local/lib/php/Predis/Connection/AbstractConnection.php(94): Predis\Connection\StreamConnection-&gt;createResource()
+#3 /usr/local/lib/php/Predis/Connection/StreamConnection.php(158): Predis\Connection\AbstractConnection-&gt;connect()
+#4 /usr/local/lib/php/Predis/Connection/AbstractConnection.php(193): Predis\Connection\StreamConnection-&gt;connect()
+#5 /usr/local/lib/php/Predis/Connection/StreamConnection.php(184): Predis\Connection\AbstractConnection-&gt;getResource()
+#6 /us in <b>/usr/local/lib/php/Predis/Connection/AbstractConnection.php</b> on line <b>168</b><br />
+
+Nov 13 18:56:52.677: INFO: Failed to get response from guestbook. err: <nil>, response: <br />
+<b>Fatal error</b>:  Uncaught exception 'Predis\Connection\ConnectionException' with message 'php_network_getaddresses: getaddrinfo failed: Name or service not known [tcp://:6379]' in /usr/local/lib/php/Predis/Connection/AbstractConnection.php:168
+Stack trace:
+#0 /usr/local/lib/php/Predis/Connection/StreamConnection.php(97): Predis\Connection\AbstractConnection-&gt;onConnectionError('php_network_get...', 0)
+#1 /usr/local/lib/php/Predis/Connection/StreamConnection.php(58): Predis\Connection\StreamConnection-&gt;tcpStreamInitializer(Object(Predis\Connection\Parameters))
+#2 /usr/local/lib/php/Predis/Connection/AbstractConnection.php(94): Predis\Connection\StreamConnection-&gt;createResource()
+#3 /usr/local/lib/php/Predis/Connection/StreamConnection.php(158): Predis\Connection\AbstractConnection-&gt;connect()
+#4 /usr/local/lib/php/Predis/Connection/AbstractConnection.php(193): Predis\Connection\StreamConnection-&gt;connect()
+#5 /usr/local/lib/php/Predis/Connection/StreamConnection.php(184): Predis\Connection\AbstractConnection-&gt;getResource()
+#6 /us in <b>/usr/local/lib/php/Predis/Connection/AbstractConnection.php</b> on line <b>168</b><br />
