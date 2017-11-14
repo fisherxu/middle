@@ -13,6 +13,9 @@ chakri-nelluri
 https://jicki.me/2017/07/04/kubernetes-1.7.0/
 http://ma0921.manlf.cn/app/index.php?jump=1&c=entry&do=show&m=xiaof_toupiao&i=5&sid=14&id=266&wxref=mp.weixin.qq.com&from=timeline&isappinstalled=0
 
+make -j 8 WHAT=test/e2e/e2e.test
+_output/bin/e2e.test --host="http://127.0.0.1:8080" --provider="local" --ginkgo.v=true --kubeconfig="$HOME/.kube/config" --repo-root="$GOPATH/src/k8s.io/kubernetes" \--ginkgo.focus="should create and stop a working application"
+
 
 package main
 
