@@ -15,7 +15,7 @@ http://ma0921.manlf.cn/app/index.php?jump=1&c=entry&do=show&m=xiaof_toupiao&i=5&
 
 make -j 8 WHAT=test/e2e/e2e.test
 _output/bin/e2e.test --host="http://127.0.0.1:8080" --provider="local" --ginkgo.v=true --kubeconfig="$HOME/.kube/config" --repo-root="$GOPATH/src/k8s.io/kubernetes" \--ginkgo.focus="should create and stop a working application"
-
+update-generated-protobuf.sh
 http://hant.ask.helplib.com/git/post_19698
 
 package main
