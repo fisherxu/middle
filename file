@@ -18,6 +18,8 @@ _output/bin/e2e.test --host="http://127.0.0.1:8080" --provider="local" --ginkgo.
 update-generated-protobuf.sh
 http://hant.ask.helplib.com/git/post_19698
 
+https://github.com/kubernetes/kubernetes/pull/50146
+
 package main
 
 import (
