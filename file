@@ -157,3 +157,13 @@ Stack trace:
 #4 /usr/local/lib/php/Predis/Connection/AbstractConnection.php(193): Predis\Connection\StreamConnection-&gt;connect()
 #5 /usr/local/lib/php/Predis/Connection/StreamConnection.php(184): Predis\Connection\AbstractConnection-&gt;getResource()
 #6 /us in <b>/usr/local/lib/php/Predis/Connection/AbstractConnection.php</b> on line <b>168</b><br />
+
+
+sw.Do("for $.index$ := range $.var$ {\n", vars)
+		if len(n.children) > 0 && n.children[0].elem {
+			sw.Do("$.local$ := $.var$[$.index$]\n", vars)
+		} else {
+			sw.Do("$.local$ := &$.var$[$.index$]\n", vars)
+		}
+		
+		vendor/k8s.io/gengo/examples/defaulter-gen/generators/defaulter.go
