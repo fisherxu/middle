@@ -167,3 +167,7 @@ sw.Do("for $.index$ := range $.var$ {\n", vars)
 		}
 		
 		vendor/k8s.io/gengo/examples/defaulter-gen/generators/defaulter.go
+		
+		if t.Elem.Kind == types.Pointer {
+				child.elem = true
+			}
