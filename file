@@ -158,6 +158,13 @@ Stack trace:
 #5 /usr/local/lib/php/Predis/Connection/StreamConnection.php(184): Predis\Connection\AbstractConnection-&gt;getResource()
 #6 /us in <b>/usr/local/lib/php/Predis/Connection/AbstractConnection.php</b> on line <b>168</b><br />
 
+func SetDefaults_ObjectMeta(obj *ObjectMeta) {
+	if obj.Enable == nil {
+		obj.Enable = new(bool)
+		*obj.Enable = true
+	}
+}
+
 
 sw.Do("for $.index$ := range $.var$ {\n", vars)
 		if len(n.children) > 0 && n.children[0].elem {
