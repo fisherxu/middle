@@ -178,3 +178,5 @@ sw.Do("for $.index$ := range $.var$ {\n", vars)
 		if t.Elem.Kind == types.Pointer {
 				child.elem = true
 			}
+			
+https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/
