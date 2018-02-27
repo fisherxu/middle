@@ -183,3 +183,4 @@ sw.Do("for $.index$ := range $.var$ {\n", vars)
 			}
 			
 https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/
+825992
