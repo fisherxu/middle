@@ -184,3 +184,7 @@ sw.Do("for $.index$ := range $.var$ {\n", vars)
 			
 https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/
 825992
+
+root@SZX1000353073:~/codes/src/k8s.io/kubernetes# python hack/boilerplate/boilerplate.py -v
+File /root/codes/src/k8s.io/kubernetes/cmd/kubeadm/app/apis/kubeadm/v1alpha1/zz_generated.conversion.go has the year
+/root/codes/src/k8s.io/kubernetes/cmd/kubeadm/app/apis/kubeadm/v1alpha1/zz_generated.conversion.go
