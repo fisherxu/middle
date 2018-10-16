@@ -1,3 +1,41 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: external-dns
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: external-dns
+    spec:
+      containers:
+      - name: external-dns
+        image: external-dns:v1
+        args:
+        - --source=service
+        - --source=ingress
+        - --provider=huawei
+        volumeMounts:
+        - name: huawei-config
+          mountPath: /etc/kubernetes
+          readOnly: true
+      volumes:
+      - name: huawei-config
+        secret:
+          secretName: huawei-config
+	  
+	 
+{
+  "iamEndpoint": "https://iam.myhuaweicloud.com/v3/auth/tokens",
+  "dnsEndpoint": "https://dns.myhuaweicloud.com/v2",
+  "projectId":"",
+  "username": "",
+  "password": "",
+  "domainname":"",
+}
+
 https://iam.cn-north-1.myhuaweicloud.com/v3/auth/tokens
 
 https://www.ibm.com/developerworks/cn/linux/kernel/l-thread/index.html
