@@ -1,3 +1,4 @@
+multiclusterdns.federation.k8s.io/v1alpha1
 https://www.youtube.com/watch?v=9HQ2XgL9YVI
 
 apiVersion: extensions/v1beta1
