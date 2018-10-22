@@ -1,3 +1,25 @@
+{
+  "dnsEndpoint": "https://dns.myhuaweicloud.com/v2",
+  "projectId":"",
+  "region": "cn-north-1",
+  "accessKey": "",
+  "secretKey": "",
+  "serviceType": "all",
+}
+{
+  "iamEndpoint": "https://iam.myhuaweicloud.com/v3/auth/tokens/",
+  "dnsEndpoint": "https://dns.myhuaweicloud.com/v2",
+  "projectId":"",
+  "username": "",
+  "password": "",
+  "domainname":"",
+  "region": "cn-north-1",
+  "accessKey": "",
+  "secretKey": "",
+  "serviceType": "all",
+}
+
+
 multiclusterdns.federation.k8s.io/v1alpha1
 https://www.youtube.com/watch?v=9HQ2XgL9YVI
 
