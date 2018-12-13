@@ -1,3 +1,40 @@
+{
+  "kind": "Event",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "nginx-deployment-7ff4565847-qftd7.156fc78117d8a269",
+    "namespace": "default",
+    "selfLink": "/api/v1/namespaces/default/events/nginx-deployment-7ff4565847-qftd7.156fc78117d8a269",
+    "uid": "208b3596-fe89-11e8-b1d5-fa163ea84d17",
+    "resourceVersion": "14995",
+    "creationTimestamp": "2018-12-13T03:42:34Z"
+  },
+  "involvedObject": {
+    "kind": "Pod",
+    "namespace": "default",
+    "name": "nginx-deployment-7ff4565847-qftd7",
+    "uid": "987f75c9-fe12-11e8-b1d5-fa163ea84d17",
+    "apiVersion": "v1",
+    "resourceVersion": "14989",
+    "fieldPath": "spec.containers{nginx}"
+  },
+  "reason": "Created",
+  "message": "Created container",
+  "source": {
+    "component": "kubelet",
+    "host": "127.0.0.1"
+  },
+  "firstTimestamp": "2018-12-13T03:42:34Z",
+  "lastTimestamp": "2018-12-13T03:42:34Z",
+  "count": 1,
+  "type": "Normal",
+  "eventTime": null,
+  "reportingComponent": "",
+  "reportingInstance": ""
+}# 
+
+
+
 http://www.ruiwen.com/zuowen/sucai/87095.html
 {
   "dnsEndpoint": "https://dns.myhuaweicloud.com/v2",
