@@ -1,3 +1,58 @@
+
+#!/usr/bin/python
+#coding:utf-8
+ 
+import RPi.GPIO as GPIO
+import time
+ 
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(26, GPIO.OUT)    #设置bcm26负责输出电压 红灯
+GPIO.setup(19,GPIO.OUT)     #黄灯
+GPIO.setup(13,GPIO.OUT)     #绿灯
+GPIO.setup(6,GPIO.OUT)      #喇叭
+ 
+ 
+def blink():
+    #通过交替输出高低电频来是LED灯闪烁
+    #红灯亮10s
+    GPIO.output(26,GPIO.HIGH)
+    time.sleep(10)
+    GPIO.output(26,GPIO.LOW)
+    time.sleep(0.5)
+    #黄灯亮3s
+    GPIO.output(19,GPIO.HIGH)
+    time.sleep(3.0)
+    GPIO.output(19,GPIO.LOW)
+    time.sleep(0.5)
+    
+    # 绿灯亮10s
+    GPIO.output(13,GPIO.HIGH)
+    time.sleep(10)
+    GPIO.output(13,GPIO.LOW)
+    time.sleep(0.5)
+    # 黄灯亮3s
+    GPIO.output(19,GPIO.HIGH)
+    time.sleep(3.0)
+    GPIO.output(19,GPIO.LOW)
+    GPIO.output(6,GPIO.HIGH)
+    time.sleep(1.0)
+    GPIO.output(6,GPIO.LOW)
+    
+ 
+#主程序
+try:
+    #循环执行
+    while True:
+        
+            blink()
+ 
+except KeyboardInterrupt:
+    pass
+ 
+GPIO.cleanup()
+
+
+
 https://bbs.huaweicloud.com/forum/thread-13022-1-1.html
 
 https://cloud.tencent.com/developer/article/1039556
