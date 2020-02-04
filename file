@@ -1,6 +1,11 @@
 #!/usr/bin/python
 #coding:utf-8
 
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'
+
+kubectl create clusterrolebinding system:anonymous --clusterrole=cluster-admin --user=system:anonymous
+
+
 import RPi.GPIO as GPIO
 import time
 
